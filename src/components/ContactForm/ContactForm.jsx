@@ -26,7 +26,6 @@ numberChangeEvent = e => {
     this.setState({number: e.target.value,});
 };
 
-
 addContactSubmit = e => {
     // prevent the form from refreshing upon submit
     e.preventDefault();

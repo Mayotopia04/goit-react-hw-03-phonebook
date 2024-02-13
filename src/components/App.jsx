@@ -15,11 +15,11 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    const savedContacts = localStorage.getItem("contacts");
+    const savedContacts = localStorage.getItem('contacts');
 
     if (savedContacts !== null) {
       //if contacts are already saved in localStorage, we write this in the state
-      this.setState({ contacts: JSON.parse(savedContacts)});
+      this.setState({ contacts: JSON.parse(savedContacts) });
     }
   }
 
@@ -28,10 +28,9 @@ export class App extends Component {
 
     if (contacts !== prevState.contacts) {
       //if a contact is new, set value to localStorage
-      localStorage.setItem("contacts", JSON.stringify(contacts));
-    }
-
-  }
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    } 
+  };
 
   addContact = newContact => {
     this.setState(prevState => ({contacts: [...prevState.contacts, newContact],}));
@@ -40,8 +39,9 @@ export class App extends Component {
   deleteContact = id => {this.setState(prevState => ({contacts: prevState.contacts.filter(contact => contact.id !== id),}));
 };
 
-setFilter = filterValue => {this.setState({
-  filter: filterValue,
+setFilter = filterValue => {
+  this.setState({
+    filter: filterValue,
 });
 };
 
@@ -57,7 +57,7 @@ render() {
     <div style={{backgroundColor: "palegoldenrod",
                 paddingLeft: "30px",
                 paddingTop: "10px",
-                paddingBottom: "10px" }}>
+                paddingBottom: "10px"}}>
       <h1>Phonebook</h1>
       <ContactForm addContact={this.addContact} contacts={contacts} />
 
