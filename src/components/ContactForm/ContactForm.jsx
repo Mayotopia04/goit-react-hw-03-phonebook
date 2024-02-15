@@ -69,7 +69,7 @@ render() {
                         name="name"
                         placeholder="Name"
                         pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +" 
+                        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan." 
                         required
                         value={name}
                         onChange={this.nameChangeEvent} />
